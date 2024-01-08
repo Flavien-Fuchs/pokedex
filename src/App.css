@@ -39,7 +39,7 @@
 .card {
   width: 200px;
   padding: 1rem;
-  background-color: lightgreen;
+  background-color: rgb(205, 118, 26);
   border-radius: 5px;
   box-shadow: 0px 0px 5px gray;
   color: white;
@@ -50,7 +50,7 @@
 }
 
 .card:hover {
-  background-color: rgb(202, 225, 202);
+  background-color: rgb(236, 188, 117);
   transition: .2s;
 }
 

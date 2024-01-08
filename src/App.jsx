@@ -30,14 +30,15 @@ const pokemonList = [
   },
 ];
 
-
 function App() {
 
-  const [pokemonIndex, setpokemonIndex] = useState(0);
+  const [pokemonIndex, setpokemonIndex] = useState("bulbasaur");
+  const index = pokemonList.map(pokemon => pokemon.name).indexOf(pokemonIndex);
+
   return (
     <div>
-      <NavBar setpokemonIndex={setpokemonIndex} pokemonIndex={pokemonIndex} max={pokemonList.length} />
-      <PokemonCard pokemon={pokemonList[pokemonIndex]} />
+      <NavBar pokemonList={pokemonList} setpokemonIndex={setpokemonIndex} />
+      <PokemonCard pokemon={pokemonList[index]} />
     </div>
   );
 }
