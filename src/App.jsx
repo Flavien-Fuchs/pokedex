@@ -2,6 +2,7 @@ import './App.css'
 import PokemonCard from "./components/PokemonCard.jsx";
 import NavBar from "./components/NavBar.jsx";
 import { useState } from "react";
+import { useEffect } from "react";
 
 
 const pokemonList = [
@@ -31,6 +32,13 @@ const pokemonList = [
 ];
 
 function App() {
+
+  useEffect(
+    () => {
+      alert("hello pokemon trainer :)")
+    },
+    []
+  );
 
   const [pokemonIndex, setpokemonIndex] = useState("bulbasaur");
   const index = pokemonList.map(pokemon => pokemon.name).indexOf(pokemonIndex);

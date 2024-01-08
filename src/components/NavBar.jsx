@@ -10,6 +10,7 @@ function NavBar({ pokemonList, setpokemonIndex }) {
     } */
     const selectPkmnClick = (pokemon) => {
         setpokemonIndex(pokemon)
+        pokemon === "pikachu" ? alert("pika pikachu !!!") : ""
     }
 
     return (
@@ -23,12 +24,8 @@ function NavBar({ pokemonList, setpokemonIndex }) {
 }
 
 NavBar.propTypes = {
-    pokemonList: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        imgSrc: PropTypes.string,
-        map: PropTypes.string,
-    }).isRequired,
-    setpokemonIndex: PropTypes.string.isRequired,
+    pokemonList: PropTypes.array.isRequired,
+    setpokemonIndex: PropTypes.func.isRequired,
 }
 
 export default NavBar;
