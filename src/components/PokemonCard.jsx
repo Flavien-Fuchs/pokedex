@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 
 
 function PokemonCard({ pokemon }) {
-    console.log(pokemon)
     return (
         <figure className="card" >
             {pokemon.imgSrc !== undefined ? (<img src={pokemon.imgSrc} alt={pokemon.name} className='card-img' />) : (<p>???</p>)
